@@ -1,0 +1,10 @@
+# SSH Connection
+SSH_USER=""
+SSH_HOST=""
+SSH_PORT="22"
+SSH_KEY="~/.ssh/id_rsa"
+
+# Paths
+PROJECT_DIR="/home/youruser/your-project"
+LOCAL_BUILD="/home/youruser/your-project/dist/your-app/browser"
+REMOTE_PARENT="/var/www/html/your-project"
