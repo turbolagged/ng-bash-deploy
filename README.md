@@ -2,6 +2,13 @@
 
 A bash script to automate Angular builds and deploy to a remote server over SSH.
 
+## Background
+
+Our team was using GitLab CI/CD for deployments until we moved to a self-hosted GitLab instance.
+Setting up and maintaining runners, reconfiguring variables and handling auth was more hassle than
+it was worth for a small team. I had some shell scripting knowledge so I just built this instead —
+simple, transparent, and no infrastructure to maintain.
+
 ## Tested With
 
 - Angular 18, Angular 20
@@ -56,9 +63,15 @@ The script will ask you to:
 - `deploy.config` is gitignored and never pushed
 - Backups are stored on the server with a timestamp in the folder name
 - Script can be placed anywhere — project path is set in `deploy.config`
+- Environment names (production / qa) must match your `angular.json` configurations
 
 ## Roadmap
 
+- [ ] Zip / compress build before upload
+- [ ] rsync support for faster uploads
 - [ ] Rollback command
 - [ ] Interactive config setup
-- [ ] rsync support for faster uploads
+
+---
+
+Made by [turbolagged](https://github.com/turbolagged) · MIT License
