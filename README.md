@@ -1,6 +1,6 @@
 # ng-bash-deploy
 
-A bash script to automate Angular builds and deploy to a Linux server over SSH.
+A bash script to automate Angular builds and deploy to a remote server over SSH.
 
 ## Tested With
 
