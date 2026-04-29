@@ -22,15 +22,21 @@ simple, transparent, and no infrastructure to maintain.
 
 ## Setup
 
-1. Copy the example config and fill in your values:
+1. Clone the repo:
+
+```bash
+git clone https://github.com/turbolagged/ng-bash-deploy.git
+```
+
+2. Copy the example config and fill in your values:
 
 ```bash
 cp deploy.config.example deploy.config
 ```
 
-2. Edit `deploy.config` with your server details and project path.
+3. Edit `deploy.config` with your server details and project path.
 
-3. Make the script executable:
+4. Make the script executable:
 
 ```bash
 chmod +x deploy.sh
