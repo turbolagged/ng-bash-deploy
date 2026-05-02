@@ -235,13 +235,18 @@ backup_and_upload() {
   echo ""
 }
 
-# ── Routes ──
-case "$1" in
-  deploy)
+init_store_ssh_key () {
+  # ssh-agent start; load ssh key; kills agent on exit
     eval $(ssh-agent -s) > /dev/null
     ssh-add "$SSH_KEY"
     trap 'ssh-agent -k > /dev/null 2>&1' EXIT
+}
 
+
+# ── Routes ──
+case "$1" in
+  deploy)
+    init_store_ssh_key
     select_options
     validate_remote_folder
     build_project
